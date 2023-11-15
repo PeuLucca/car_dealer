@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+/* NavBar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 90px;
+  cursor: pointer;
+}
+
+.ul-navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.ul-navbar li {
+  margin-right: 15px;
+}
+
+.ul-navbar li a {
+  color: #cc2228;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #913033;
+  }
+}
+
+.signup {
+  position: relative;
+}
+
+.signup button {
+  background-color: white;
+  color: #913033;
+  border: none;
+  padding: 8px 15px;
+  border: 2px solid #913033;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #913033;
+    color: white;
+  }
+}
+
+.user-email {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #CC2228;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  @media screen and (max-width: 490px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .ul-navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 25%;
+      width: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  
+    .ul-navbar.show-menu {
+      display: flex;
+    }
+  
+    .ul-navbar li {
+      margin: 0;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+/*Hero*/
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-container h1 {
+    color: rgb(54, 52, 52);
+}
+
+.hero-container h3 {
+    margin-bottom: 0;
+    color: #CC2228;
+}
+
+.hero-container-buttons {
+    margin-top: -15px;
+}
+
+.hero-button_details {
+    margin-right: 5px;
+    background-color: white;
+    color: #913033;
+    border: none;
+    padding: 10px 20px;
+    border: 2px solid #913033;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #913033;
+      color: white;
+    }
+}
+
+.hero-button_test_drive {
+    background-color: #913033;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border: 2px solid #913033;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*Cards*/
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .card h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #CC2228;
+  }
+  
+  .card button {
+    background-color: #913033;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .card button:hover {
+    background-color: #6e2528;
+  }
+
+/*Review*/
+.review-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .review-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .review-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .review-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .review-content {
+    padding: 15px;
+  }
+  
+  .review-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .review-content p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .reviewer-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .rating {
+    display: flex;
+    color: #FFD700;
+  }
+  
+  .rating span {
+    font-size: 18px;
+    margin-right: 2px;
+  }
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+/* CarInfo */
+  .carInfo-image {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .carInfo-brand {
+    color: #CC2228;
+    margin-bottom: 0;
+  }
+
+  .carInfo-year {
+    margin-top: -8px;
+  }
+
+  .carInfo-price {
+    text-decoration: underline;
+  }
+
+  .carInfo-text {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .carInfo-text {
+      display: none;
+    }
+  }
+
+  .carInfo-button {
+    background-color: white;
+    color: #a23034;
+    border: none;
+    padding: 8px 15px;
+    border: 2px solid #913033;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 5px;
+  
+    &:hover {
+      background-color: #913033;
+      color: white;
+    }
+  }
+
+  .carInfo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carInfo-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .carInfo-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .carInfo-input:focus {
+    outline: none;
+  }
